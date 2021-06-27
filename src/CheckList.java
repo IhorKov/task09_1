@@ -21,15 +21,14 @@ public class CheckList {
         }
     }
     public static List<String> checkListMethod(List<String> list){
-        List<String> copy = new ArrayList<>(list);
+        List<String> result = new ArrayList<>();
 
-        for (int i = 0; i < copy.size();) {
-            if (!copy.get(i).matches(".{0,4}[^0-9]")){
-                copy.remove(i);
+        for (int i = 0; i < list.size(); i++) {
+            if (!list.get(i).matches(".{0,4}[^0-9]")){
                 continue;
             }
-            i++;
+            result.add(list.get(i));
         }
-        return copy;
+        return result;
     }
 }
