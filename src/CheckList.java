@@ -14,13 +14,13 @@ public class CheckList {
         listStr.add("asd");
         listStr.add("asds");
 
-        List<String> result= checkListMethod(listStr);
+        List<String> result= checkList(listStr);
 
         for (String str : result){
             System.out.println(str);
         }
     }
-    public static List<String> checkListMethod(List<String> list){
+    public static List<String> checkList(List<String> list){
         List<String> result = new ArrayList<>();
 
         for (int i = 0; i < list.size(); i++) {
